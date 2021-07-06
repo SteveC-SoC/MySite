@@ -14,6 +14,7 @@
 }
 
 .navBar{
+    /*Nav created but not visable/interactable with as the transform scale is zero*/
     width: 20rem;
     height: 20rem;
     background-color: #6a7fdb;
@@ -31,6 +32,7 @@
 
 
 .change .navBar {
+    /* here is where the Nav bar shows up on the page */
     transform: scale(1) rotate(0);
 }
 
@@ -38,17 +40,7 @@
     position: absolute;
 }
 
-.navLink i {
-    font-size: 3rem;
-    color: #fff;
-    transition: color 0.3s;
-}
-
 .navLink:hover {
-    color: #222;
-}
-
-.navLink:hover i {
     color: #222;
 }
 
@@ -57,22 +49,22 @@
 }
 .navLink:nth-child(2) {
     top: 5rem;
-    right: 2rem;
+    right: 3rem;
 }
 .navLink:nth-child(3) {
     bottom: 5rem;
-    right: 2rem;
+    right: 3rem;
 }
 .navLink:nth-child(4) {
     bottom: 2rem;
 }
 .navLink:nth-child(5) {
     bottom: 5rem;
-    left: 2rem;
+    left: 3rem;
 }
 .navLink:nth-child(6) {
     top: 5rem;
-    left: 2rem;
+    left: 3rem;
 }
 
 .navButton {
