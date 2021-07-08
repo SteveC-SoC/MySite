@@ -7,15 +7,9 @@ import Projects from "../Projects";
 function App() {
   return (
     <Router>
+      <Link to="/">Home</Link>
       <div className="App">
-        <div className="nav">
-          <Link to="/">Home</Link>
-          <Link to="/about">About Me</Link>
-          <Link to="/projects">Projects</Link>
-          <Link to="/article">Article</Link>
-        </div>
-
-        <Switch>
+          <Switch>
           <Route path="/about">
             <AboutMe />
           </Route>

@@ -1,5 +1,5 @@
 # WORK IN PROGRESS
-# MySite
+# My Site
 
 Build and host a site showing my work and links to external sites
 
