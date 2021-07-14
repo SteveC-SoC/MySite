@@ -2,12 +2,13 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import AboutMe from "../AboutMe";
 import Article from "../Article";
 import HomePage from "../HomePage";
+import NavBtn from "../NavBtn";
 import Projects from "../Projects";
 
 function App() {
   return (
     <Router>
-      <Link to="/">Home</Link>
+      <NavBtn />
       <div className="App">
           <Switch>
           <Route path="/about">
