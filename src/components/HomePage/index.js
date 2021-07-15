@@ -1,16 +1,30 @@
-import { useState} from 'react';
 import "./homePage.css";
-import {FaTwitter, FaGithub, FaLinkedin, FaPlus, FaSmile, FaNewspaper, FaPencilRuler} from "react-icons/fa";
-import {IconContext} from "react-icons";
 import Nav from '../Nav';
+import pixelSteve from '../../media/Steve-nBG-pic.png'
+import { useState } from 'react';
+
 
 
 
 function HomePage() {
+
+  const [isActive, setActive] = useState(false);
+  const [textChange, setTextChange] = useState(true);
+
+  let bubble = "test1"
+  //let bubble ={textChange ? 'behold' : 'my stuff'};
+  
+  const handleClick = ()=> {
+    setActive(!isActive);
+    setTextChange(!textChange);
+  }
+
   return (
       //className changes depending on if isActive is true or false
     <div className="homePage">
-    <Nav/>
+    <Nav handleClick={handleClick} isActive={isActive}/>
+    <img className="pixelSteve" src={pixelSteve} alt="Pixel Steve" />
+    <div className={textChange ? 'speechBubble' : 'speechBubble change'}>{bubble}</div>
     </div>
   );
 }

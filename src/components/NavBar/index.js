@@ -1,54 +1,35 @@
 import { useState } from 'react';
-import {FaTwitter, FaGithub, FaLinkedin, FaPlus, FaSmile, FaNewspaper, FaPencilRuler} from "react-icons/fa";
-import {IconContext} from "react-icons";
-import './Nav.css'
+import { Link } from 'react-router-dom';
+import './NavBar.css';
 
 function NavBar() {
 
-    const [isActive, setActive] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     const handleClick = ()=> {
-        setActive(!isActive);
+        setMenuOpen(!menuOpen);
     }
     return(
-        <div className={isActive ? 'navWrapper change' : 'navWrapper'}>
+        <div>
 
-        <div className="navBar">
-        <a href="/about" className="navLink">
-        <IconContext.Provider value={{style: {fontSize: '30px', color: "rgb(0, 0, 0)"}}}>
-                <FaSmile title="About Me"/>
-            </IconContext.Provider>
-        </a>
-        <a href="/projects" className="navLink">
-        <IconContext.Provider value={{style: {fontSize: '30px', color: "rgb(0, 0, 0)"}}}>
-                <FaPencilRuler title="projects"/>
-            </IconContext.Provider>
-        </a>
-        <a href="https://twitter.com/of_gloin" rel="noreferrer" target="_blank" className="navLink">
-            <IconContext.Provider value={{style: {fontSize: '30px', color: "rgb(0, 0, 0)"}}}>
-                <FaTwitter title="Twitter"/>
-            </IconContext.Provider>
-        </a>
-        <a href="https://github.com/SteveC-SoC" rel="noreferrer" target="_blank" className="navLink">
-         <IconContext.Provider value={{style: {fontSize: '30px', color: "rgb(0, 0, 0)"}}}>
-            <FaGithub title="GitHub"/>
-         </IconContext.Provider>
-        </a>
-        <a href="https://www.linkedin.com/in/steve-cadden/" rel="noreferrer" target="_blank" className="navLink">
-         <IconContext.Provider value={{style: {fontSize: '30px', color: "rgb(0, 0, 0)"}}}>
-            <FaLinkedin title="LinkedIn"/>
-         </IconContext.Provider>
-        </a>
-        <a href="/article" className="navLink">
-        <IconContext.Provider value={{style: {fontSize: '30px', color: "rgb(0, 0, 0)"}}}>
-            <FaNewspaper title="Articles"/>
-         </IconContext.Provider>
-        </a>
-      </div>
-      <div className="navButton" onClick={handleClick}>
-            <FaPlus title="Click Me"/>
+        <div className="dropdown">
+        {/* the class name changes on click, to trigger the CSS animation  */}
+       <div onMouseEnter={handleClick} onMouseLeave={handleClick}>
+       <div className={menuOpen ? 'menuBtn open' : 'menuBtn'} >
+           <div className="menuBtnBurgur" ></div>
+       </div>
+            <div className="dropdownContent">
+                    <p><Link to="/">Home</Link></p>
+                    <p><Link to="/about">About Me</Link></p>
+                    <p><Link to="/projects">Projects</Link></p>
+                    <p><Link to="/article">Articles</Link></p>
+                    <p><a href="https://www.linkedin.com/in/steve-cadden/" rel="noreferrer" target="_blank">LinkedIn</a></p>
+                    <p><a href="https://github.com/SteveC-SoC" rel="noreferrer" target="_blank">GitHub</a></p>
+                    <p><a href="https://twitter.com/of_gloin" rel="noreferrer" target="_blank">Twitter</a></p>
+            </div>
         </div>
-    </div>
+       </div>
+       </div>
     )
 }
 

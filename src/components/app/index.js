@@ -1,13 +1,14 @@
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AboutMe from "../AboutMe";
 import Article from "../Article";
 import HomePage from "../HomePage";
+import NavBar from "../NavBar";
 import Projects from "../Projects";
 
 function App() {
   return (
     <Router>
-      <Link to="/">Home</Link>
+      <NavBar/>
       <div className="App">
           <Switch>
           <Route path="/about">

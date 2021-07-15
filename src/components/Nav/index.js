@@ -1,15 +1,10 @@
-import { useState } from 'react';
 import {FaTwitter, FaGithub, FaLinkedin, FaPlus, FaSmile, FaNewspaper, FaPencilRuler} from "react-icons/fa";
 import {IconContext} from "react-icons";
 import './Nav.css'
 
-function Nav() {
+function Nav({isActive, handleClick}) {
 
-    const [isActive, setActive] = useState(false);
-
-    const handleClick = ()=> {
-        setActive(!isActive);
-    }
+    
     return(
         <div className={isActive ? 'navWrapper change' : 'navWrapper'}>
 
