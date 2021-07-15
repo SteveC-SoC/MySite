@@ -20,7 +20,6 @@ function HomePage() {
   }
 
   return (
-      //className changes depending on if isActive is true or false
     <div className="homePage">
     <Nav handleClick={handleClick} isActive={isActive}/>
     <img className="pixelSteve" src={pixelSteve} alt="Pixel Steve" />
