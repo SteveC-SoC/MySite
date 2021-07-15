@@ -28,3 +28,16 @@ Thinking of using React Route to move between the three other pages, need to ref
 [React Route](https://reactrouter.com/web/guides/quick-start)
 
 Route is working, but I don't want this at the top of the page, will need to look into this.
+
+### Pages
+
+These are under construction  
+About Me - picture and a paragraph or two to be added
+
+<img src="./src/media/AboutMe.JPG" />
+
+Article - add link to blog, future blogs will be added here
+
+Projects - take a selection of completed projects and put here (or links to the site if hosted)
+
+<img src="./src/media/ProjectsPage.JPG" />

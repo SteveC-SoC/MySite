@@ -14,3 +14,8 @@
 .articleMain{
     background: yellow;
 }
+
+.bob {
+    border-radius: 25%;
+    background: red
+}
