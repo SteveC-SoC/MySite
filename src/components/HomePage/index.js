@@ -9,21 +9,19 @@ import { useState } from 'react';
 function HomePage() {
 
   const [isActive, setActive] = useState(false);
-  const [textChange, setTextChange] = useState(true);
+  const [bubbleText, setTextChange] = useState("Behold.....");
 
-  let bubble = "test1"
-  //let bubble ={textChange ? 'behold' : 'my stuff'};
   
   const handleClick = ()=> {
     setActive(!isActive);
-    setTextChange(!textChange);
+    setTextChange("My Stuff!!");
   }
 
   return (
     <div className="homePage">
     <Nav handleClick={handleClick} isActive={isActive}/>
     <img className="pixelSteve" src={pixelSteve} alt="Pixel Steve" />
-    <div className={textChange ? 'speechBubble' : 'speechBubble change'}>{bubble}</div>
+    <div className='speechBubble'>{bubbleText}</div>
     </div>
   );
 }

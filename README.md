@@ -41,3 +41,4 @@ Article - add link to blog, future blogs will be added here
 Projects - take a selection of completed projects and put here (or links to the site if hosted)
 
 <img src="./src/media/ProjectsPage.JPG" />
+
